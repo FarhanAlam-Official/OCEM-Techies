@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262.1 83.3% 57.8%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 2.5%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 3.5%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 3.5%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 263.4 70% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 20%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 20%;
+    --muted-foreground: 215 20.2% 75%;
+    --accent: 217.2 32.6% 20%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 20%;
+    --input: 217.2 32.6% 20%;
+    --ring: 263.4 70% 60%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Dark mode text improvements */
+.dark {
+  /* Improved text rendering for better readability */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark .text-gray-600 {
+  color: hsl(210 25% 80%);
+}
+
+.dark .text-gray-500 {
+  color: hsl(210 25% 70%);
+}
+
+.dark .text-gray-400 {
+  color: hsl(210 25% 60%);
+}
+
+/* Improved heading contrast in dark mode */
+.dark h1, .dark h2, .dark h3, .dark h4 {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark .text-gray-900 {
+  color: hsl(210 40% 98%);
+}
+
+/* Enhanced gradient text for dark mode */
+.dark .bg-gradient-to-r.from-purple-600.to-blue-600.bg-clip-text {
+  --tw-gradient-from: hsl(263.4 90% 70%);
+  --tw-gradient-to: hsl(217.2 91.2% 70%);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient improvements for dark mode */
+.dark .bg-gradient-to-br.from-slate-950.to-blue-950 {
+  --tw-gradient-from: hsl(222.2 84% 2.5%);
+  --tw-gradient-to: hsl(222.2 84% 4%);
+}
+
+.dark .from-purple-600.to-blue-600 {
+  --tw-gradient-from: hsl(263.4 70% 60%);
+  --tw-gradient-to: hsl(217.2 91.2% 60%);
+}
+
+/* Card and border improvements for dark mode */
+.dark .border-purple-100 {
+  border-color: hsl(263.4 70% 20%);
+}
+
+.dark .border-blue-100 {
+  border-color: hsl(217.2 91.2% 20%);
+}
+
+.dark .border-coral-100 {
+  border-color: hsl(0 84.2% 20%);
+}
+
+/* Enhanced text readability for larger text */
+.dark .text-xl.text-gray-600 {
+  color: hsl(210 30% 85%);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Improved contrast for feature descriptions */
+.dark .text-gray-600.leading-relaxed {
+  color: hsl(210 30% 85%);
+  letter-spacing: 0.01em;
+}
+
+/* Better contrast for badges in dark mode */
+.dark .bg-coral-100.text-coral-700 {
+  background-color: hsl(0 84.2% 15%);
+  color: hsl(0 84.2% 85%);
+}
